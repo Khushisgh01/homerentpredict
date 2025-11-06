@@ -29,7 +29,7 @@ function onClickedEstimatePrice() {
   var location = document.getElementById("uiLocations");
   var estPrice = document.getElementById("uiEstimatedPrice");
 
-    var url = "/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
+   var url = "https://homerentpredict.onrender.com/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
     //  var url = "/api/predict_home_price"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
 
   $.post(url, {
@@ -46,7 +46,7 @@ function onClickedEstimatePrice() {
 
 function onPageLoad() {
   console.log( "document loaded" );
-      var url = "/get_location_names"; //Use this if you are NOT using nginx which is first 7 tutorials
+      var url = "https://homerentpredict.onrender.com/get_location_names"; //Use this if you are NOT using nginx which is first 7 tutorials
 
     // var url = "/api/get_location_names"; // Use this if  you are using nginx. i.e tutorial 8 and onwards  
   $.get(url,function(data, status) {
@@ -65,3 +65,4 @@ function onPageLoad() {
 }
 
 window.onload = onPageLoad;
+
